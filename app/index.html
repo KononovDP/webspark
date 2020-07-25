@@ -4,8 +4,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>Webspark</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/app.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/app.min.css">
 </head>
 
 <body>
@@ -15,30 +17,464 @@
     <!-- HEADER -->
     <header class="header">
       <div class="container">
-        <div class="header__inner"></div>
+        <div class="header__inner">
+          <div class="header__img for__img">
+            <img src="images/dest/image-1-min.png" alt="">
+          </div>
+
+          <a href="#" class="header__logo for__img">
+            <img src="images/dest/logo-min.png" alt="Logo">
+          </a>  
+
+          <div class="header__block">
+            <div class="header__top">
+              <div class="header__title">monblanproject</div>
+              <div class="header__date">Start on 17-02-2016</div>
+            </div>
+            <div class="header__stat">
+              <div class="header__stat__item">
+                <span class="header__stat__number">870 </span>
+                <span class="header__stat__text">posts</span>
+              </div>
+              <div class="header__stat__item">
+                <span class="header__stat__number">11.787 </span>
+                <span class="header__stat__text">followers</span>
+              </div>
+              <div class="header__stat__item">
+                <span class="header__stat__number">112 </span>
+                <span class="header__stat__text">following</span>
+              </div>
+            </div>
+            <div class="header__datepicker">
+              <div class="header__datepicker__text">Date</div>
+              <div class="datepicker">
+
+                <div class="datepicker__wrap">
+                  <input class="datepicker__input" type="text" id="datepicker__start" placeholder="from">
+                  <button class="datepicker__button" id="refresh__start">
+                    <i class="fas fa-times"></i>
+                  </button>
+                  <button class="datepicker__button" id="show__start">
+                    <i class="far fa-calendar-minus"></i>
+                  </button>
+                </div>
+
+                <div class="datepicker__wrap">
+                  <input class="datepicker__input" type="text" id="datepicker__end" placeholder="to">
+                  <button class="datepicker__button" id="refresh__end">
+                    <i class="fas fa-times"></i>
+                  </button>
+                  <button class="datepicker__button" id="show__end">
+                    <i class="far fa-calendar-minus"></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- HEADER END -->
 
     <!-- MAIN -->
     <main class="main">
-      <div class="catalog">
-        <div class="catalog__header">
-          <button class="catalog__toggle catalog__toggle--active"></button>
-          <button class="catalog__toggle"></button>
+      <div class="container">
+        <div class="catalog">
+          <div class="catalog__header">
+            <button id="button-grid" class="catalog__toggle catalog__toggle--active">
+              <i class="fas fa-th"></i>
+            </button>
+            <button id="button-list" class="catalog__toggle">
+              <i class="fas fa-list"></i>
+            </button>
+          </div>
+          <div id="catalog" class="catalog__body">
+            <a href="#" class="card">
+              <div class="card__img cover__img">
+                <img src="images/dest/cards/img-1-min.jpg" alt="" class="image">
+              </div>
+              <div class="card__text">
+                <div class="card__info">
+                  <div class="card__info__label">Today</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">128</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">131</span>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="card__info__label">9-08-2016</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">67</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">22</span>
+                  </div>
+                </div>
+                <div class="card__info card__info--center">
+                  <div class="card__info__label">Image upload:</div>
+                  <div class="card__info__value">11-04-2016 </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="card__img cover__img">
+                <img src="images/dest/cards/img-2-min.jpg" alt="" class="image">
+              </div>
+              <div class="card__text">
+                <div class="card__info">
+                  <div class="card__info__label">Today</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">128</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">131</span>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="card__info__label">9-08-2016</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">67</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">22</span>
+                  </div>
+                </div>
+                <div class="card__info card__info--center">
+                  <div class="card__info__label">Image upload:</div>
+                  <div class="card__info__value">11-04-2016 </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="card__img cover__img">
+                <div class="card__icon for__img">
+                  <img src="images/dest/camera.png" alt="Camera">
+                </div>  
+                <img src="images/dest/cards/img-3-min.jpg" alt="" class="image">
+              </div>
+              <div class="card__text">
+                <div class="card__info">
+                  <div class="card__info__label">Today</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">128</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">131</span>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="card__info__label">9-08-2016</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">67</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">22</span>
+                  </div>
+                </div>
+                <div class="card__info card__info--center">
+                  <div class="card__info__label">Image upload:</div>
+                  <div class="card__info__value">11-04-2016 </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="card__img cover__img">
+                <img src="images/dest/cards/img-4-min.jpg" alt="" class="image">
+              </div>
+              <div class="card__text">
+                <div class="card__info">
+                  <div class="card__info__label">Today</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">128</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">131</span>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="card__info__label">9-08-2016</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">67</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">22</span>
+                  </div>
+                </div>
+                <div class="card__info card__info--center">
+                  <div class="card__info__label">Image upload:</div>
+                  <div class="card__info__value">11-04-2016 </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="card__img cover__img">
+                <img src="images/dest/cards/img-5-min.jpg" alt="" class="image">
+              </div>
+              <div class="card__text">
+                <div class="card__info">
+                  <div class="card__info__label">Today</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">128</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">131</span>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="card__info__label">9-08-2016</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">67</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">22</span>
+                  </div>
+                </div>
+                <div class="card__info card__info--center">
+                  <div class="card__info__label">Image upload:</div>
+                  <div class="card__info__value">11-04-2016 </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="card__img cover__img">
+                <img src="images/dest/cards/img-6-min.jpg" alt="" class="image">
+              </div>
+              <div class="card__text">
+                <div class="card__info">
+                  <div class="card__info__label">Today</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">128</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">131</span>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="card__info__label">9-08-2016</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">67</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">22</span>
+                  </div>
+                </div>
+                <div class="card__info card__info--center">
+                  <div class="card__info__label">Image upload:</div>
+                  <div class="card__info__value">11-04-2016 </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="card__img cover__img">
+                <img src="images/dest/cards/img-7-min.jpg" alt="" class="image">
+              </div>
+              <div class="card__text">
+                <div class="card__info">
+                  <div class="card__info__label">Today</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">128</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">131</span>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="card__info__label">9-08-2016</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">67</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">22</span>
+                  </div>
+                </div>
+                <div class="card__info card__info--center">
+                  <div class="card__info__label">Image upload:</div>
+                  <div class="card__info__value">11-04-2016 </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="card__img cover__img">
+                <img src="images/dest/cards/img-8-min.jpg" alt="" class="image">
+              </div>
+              <div class="card__text">
+                <div class="card__info">
+                  <div class="card__info__label">Today</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">128</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">131</span>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="card__info__label">9-08-2016</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">67</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">22</span>
+                  </div>
+                </div>
+                <div class="card__info card__info--center">
+                  <div class="card__info__label">Image upload:</div>
+                  <div class="card__info__value">11-04-2016 </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <div class="card__img cover__img">
+                <img src="images/dest/cards/img-9-min.jpg" alt="" class="image">
+              </div>
+              <div class="card__text">
+                <div class="card__info">
+                  <div class="card__info__label">Today</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">128</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">131</span>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="card__info__label">9-08-2016</div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="card__info__text">67</span>
+                  </div>
+                  <div class="card__info__value">
+                    <span class="card__info__icon">
+                      <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <span class="card__info__text">22</span>
+                  </div>
+                </div>
+                <div class="card__info card__info--center">
+                  <div class="card__info__label">Image upload:</div>
+                  <div class="card__info__value">11-04-2016 </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="catalog__action">
+            <button class="button">load more</button>
+          </div>
         </div>
-        <div class="catalog__body">
-
-        </div>
-        <div class="catalog__action">
-          <button class="button">load more</button>
-        </div>
-      </div>
+      </div> 
     </main>
     <!-- MAIN END -->
 
   </div>
 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/app.min.js"></script>
 </body>
 </html>

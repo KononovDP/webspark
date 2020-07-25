@@ -6,26 +6,30 @@
 =line-height($sizeValue) 
 	line-height: (1 / 16) * $sizeValue + rem
 
-=screen($point) 
+=media($point) 
   $xl: 1200px
   $lg: 992px
   $md: 768px
   $sm: 576px
+  $xs: 480px
 
   @if $point == xl
-    @media screen and (min-width: $xl) 
+    @media screen and (max-width: $xl) 
       @content
   @else if $point == lg 
-    @media screen and (min-width: $lg) 
+    @media screen and (max-width: $lg) 
       @content
   @else if $point == md 
-    @media screen and (min-width: $md) 
+    @media screen and (max-width: $md) 
       @content
   @else if $point == sm 
-    @media screen and (min-width: $sm) 
+    @media screen and (max-width: $sm) 
+      @content
+  @else if $point == xs 
+    @media screen and (max-width: $xs) 
       @content
   @else 
-    @media screen and (min-width: $point) 
+    @media screen and (max-width: $point) 
       @content
     
   

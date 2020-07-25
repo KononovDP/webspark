@@ -1,3 +1,111 @@
 .header
-    height: 198px
-    background-color: #fff
+  &__inner
+    position: relative
+    // height: 198px
+    display: flex
+    align-items: flex-start
+    padding: 15px 70px 34px 70px
+    @include media(lg)
+      padding: 15px 15px 34px 15px
+    @include media(md)
+      padding: 15px 0 34px 0
+    @include media(sm)
+      padding: 15px 0
+    &::before
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 10000px
+      height: 100%
+      display: block
+      content: ''
+      background-color: rgba(255,255,255,.6)
+      z-index: 10 
+  &__img
+    position: absolute
+    top: 0
+    left: -634px
+    width: 1006px
+    @include media(lg)
+      left: -715px
+    @include media(md)
+      left: -805px
+      top: -130px
+  &__logo
+    position: relative
+    display: flex
+    margin-right: 105px
+    z-index: 20
+    @include media(lg)
+      margin-right: 95px
+    @include media(md)
+      flex: 0 0 50px
+      max-width: 50px
+      margin-right: 35px
+    @include media(sm)
+      position: absolute
+  &__block
+    position: relative
+    padding: 27px 0 0
+    z-index: 10
+    @include media(sm)
+      width: 100%
+      padding-top: 10px
+  &__top
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+    font-family: 'Roboto', sans-serif
+    @include media(sm)
+      justify-content: center
+      padding: 0 60px
+    @include media(xs)
+      flex-direction: column
+  &__title
+    margin-right: 22px
+    @include font-size(35)
+    @include line-height(35)
+    letter-spacing: -2px
+    @include media(xs)
+      margin-right: 0
+      margin-bottom: 10px
+      font-size: 28px
+  &__date
+    display: block
+    padding: 0 10px
+    border: 1px solid map-get($bg-colors, primary)
+    border-radius: 3px
+    @include font-size(15)
+    @include line-height(29)
+    color: map-get($text-colors, primary)
+  &__stat
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 17px
+    font-family: 'Proxima Nova Regular'
+    @include font-size(17)
+    @include line-height(24)
+    @include media(sm)
+      justify-content: center
+    &__item
+      &:not(:last-child)
+        margin-right: 25px
+    &__number
+      margin-right: 5px
+      font-weight: bold
+  &__datepicker
+    display: flex
+    align-items: center
+    font-family: 'Proxima Nova Regular'
+    @include font-size(17)
+    @include line-height(24)
+    @include media(sm)
+      justify-content: center
+      &__text 
+        display: none
+    .datepicker
+      margin-left: 15px
+      @include media(sm)
+        margin-left: 0
+
