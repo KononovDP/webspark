@@ -1,0 +1,24 @@
+.button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  min-width: 126px
+  min-height: 30px
+  padding: 0 20px
+  background-color: transparent
+  border: 1px solid map-get($bg-colors, black)
+  border-radius: 50px
+  text-align: center
+  font-family: 'Proxima Nova Regular'
+  +font-size(12)
+  +line-height(24)
+  text-transform: uppercase
+  color: map-get($text-colors, black)
+  cursor: pointer
+  transition: all .3s
+  &:hover
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.5)
+  &:focus
+    outline: none
+    border-color: #3b8ede
+    box-shadow: 0 0 5px 1px map-get($bg-colors, primary)
